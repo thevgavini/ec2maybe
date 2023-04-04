@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+   
+</head>
+<body>
+    <div class="container">
+        <form method="post">
+          {% csrf_token %}
+            <h1>Login</h1>
+            <div class="input-field">
+                <input type="text" placeholder="Username" name="username">
+            </div>
+            <div class="input-field">
+                <input type="password" placeholder="Password" name="password">
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 400px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    padding: 12px;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background: #0077FF;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background: #0066CC;
+}
+    </style>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Page</title>
+	<style>
+		body {
+			background-color: #222;
+			color: white;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		
+		button {
+			background-color: #333;
+			color: white;
+			border: none;
+			padding: 15px 20px;
+			margin: 10px;
+			border-radius: 10px;
+			cursor: pointer;
+			font-size: 18px;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+		}
+		
+		#startButton {
+			background-color: #4CAF50;
+		}
+		
+		#stopButton {
+			background-color: #f44336;
+		}
+	</style>
+</head>
+<body>
+	<h1>Button Page</h1>
+	<a href="{% url 'start' %}" ><button id="startButton">Start</button></a>
+	<a href="{% url 'stop' %}" ><button id="stopButton">Stop</button></a>
+	<br><br>
+	<a href="{% url 'logout' %}" ><button>Logout</button></a>
+</body>
+</html>
